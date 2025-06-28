@@ -1,0 +1,15 @@
+typescript basics:
+	installed typescript:
+		npm install -g typescript
+	installed ts node:
+		npm install -g ts-node
+	create config file for typescript (done in cmd prompt for admin access) ('tsc' is typescript compiler):
+		tsc --init
+	create js file from ts file (done in cmd prompt for admin access) :
+		tsc fileName.ts
+	run js file:
+		node fileName.js
+	install 'Code Runner' extension (to run ts more efficiently than creating js files first):
+		then right click on ts file > 'run code' 
+		
+
