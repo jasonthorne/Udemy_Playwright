@@ -1,4 +1,4 @@
-typescript basics:
+02 typescript basics:
 	installed typescript:
 		npm install -g typescript
 	installed ts node:
@@ -11,5 +11,6 @@ typescript basics:
 		node fileName.js
 	install 'Code Runner' extension (to run ts more efficiently than creating js files first):
 		then right click on ts file > 'run code' 
-		
+
+03 typescript advanced:
 
