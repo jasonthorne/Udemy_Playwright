@@ -12,7 +12,9 @@
 	install 'Code Runner' extension (to run ts more efficiently than creating js files first):
 		then right click on ts file > 'run code' 
 
-03 install playwright
-	1st method:
+03 playwright:
+	install playwright:
 		npm init playwright@latest (then keep defaults)
+	run default test(s):
+		npx playwright test
 
