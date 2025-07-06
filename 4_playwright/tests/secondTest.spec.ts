@@ -5,7 +5,7 @@ import {test, expect} from '@playwright/test';
 //async: mnakes the function return a promise
 //await: waits untill the promise is resolved
 
-test('My first test', async({page})=>{
+test('My second test', async({page})=>{
     //open up google website:
     await page.goto('https://www.google.com');
 

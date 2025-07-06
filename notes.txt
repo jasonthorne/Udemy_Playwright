@@ -17,4 +17,11 @@
 		npm init playwright@latest (then keep defaults)
 	run default test(s):
 		npx playwright test
+	run tests with x paralell workers:
+		npx playwright test --workers x
+	run a test from specific spec file:
+		npx playwright test [relative path to spec file (with forward slashes!)]
+	run multiple spec files: - NOTE: '.spec.ts' not needed to run file, just first name works
+		npx playwright test [name of 1st spec file] [name of 2nd spec file]
+	
 
