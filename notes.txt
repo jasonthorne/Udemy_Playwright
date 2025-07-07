@@ -23,5 +23,14 @@
 		npx playwright test [relative path to spec file (with forward slashes!)]
 	run multiple spec files: - NOTE: '.spec.ts' not needed to run file, just first name works
 		npx playwright test [name of 1st spec file] [name of 2nd spec file]
+	run a test by it's test name:
+		npx playwright test -g 'test name'
+	run tests only in chromium:
+		npx playwright test --project=chromium
+	run tests as headless
+		npx playwright test --headed
+	run tests in debug mode for a browser:
+		npx playwright test --project=chromium --debug
+		
 	
 
