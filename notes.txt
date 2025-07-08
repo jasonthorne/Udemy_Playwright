@@ -31,8 +31,22 @@ Playwright:
 		npx playwright test --headed
 	run tests in debug mode for a browser:
 		npx playwright test --project=chromium --debug
+
+codegen:
 	enable automatic code generation:
 		npx playwright codegen
+	ebable with specific browser (chromium is default):
+		npx playwright codegen --browser firefox
+	automatically output a file with actions listed (instead of having to paste from window and create by default):
+		npx playwright codegen -o ./tests/nameOfNewFile.spec.ts
+	ebable with a specific viewport size:
+		npx playwright codegen --viewport-size=800,600
+	enable with a specific device size:
+		npx playwright codegen --device="iPhone 11 Pro"
+	show codegen help options:
+		npx playwright codegen --help
+
+	
 
 		
 	
