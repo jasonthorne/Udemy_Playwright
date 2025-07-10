@@ -27,7 +27,7 @@ Playwright:
 		npx playwright test -g 'test name'
 	run tests only in chromium:
 		npx playwright test --project=chromium
-	run tests as headless
+	run tests as headed:
 		npx playwright test --headed
 	run tests in debug mode for a browser:
 		npx playwright test --project=chromium --debug
