@@ -46,6 +46,9 @@ codegen:
 	show codegen help options:
 		npx playwright codegen --help
 
+traceviewer (found under 'retry' tab in test report):
+
+
 	
 
 		
