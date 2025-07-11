@@ -47,6 +47,11 @@ codegen:
 		npx playwright codegen --help
 
 traceviewer (found under 'retry' tab in test report):
+	open created trace.zip:
+		npx playwright show-trace ./[copied relative path, with back slashes changed to frwrd slashes]
+	got to trace website, and upload trace.zip file:
+		trace.playwright.dev
+
 
 
 	
