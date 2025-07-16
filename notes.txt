@@ -51,6 +51,8 @@ traceviewer (found under 'retry' tab in test report):
 		npx playwright show-trace ./[copied relative path, with back slashes changed to frwrd slashes]
 	got to trace website, and upload trace.zip file:
 		trace.playwright.dev
+	change trace command (from whats defined in config file) on test run:
+		npx playwright test --trace=[command you want. eg: on]
 
 
 
