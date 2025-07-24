@@ -54,7 +54,10 @@ traceviewer (found under 'retry' tab in test report):
 	change trace command (from whats defined in config file) on test run:
 		npx playwright test --trace=[command you want. eg: on]
 
-
+Locating element in webpage dom:
+	find with id: #
+	find with css: [put in squarebrackets]
+	x path: //nameOfTag[@attributeName=attributeValue] 
 
 	
 
