@@ -1,3 +1,8 @@
+handy links:
+	good testing site:
+		https://www.saucedemo.com/
+
+
 Typescript basics:
 	installed typescript:
 		npm install -g typescript
