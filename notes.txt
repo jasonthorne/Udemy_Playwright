@@ -63,6 +63,9 @@ Locating element in webpage dom:
 	find with id: #
 	find with css: [put in squarebrackets]
 	x path: //nameOfTag[@attributeName=attributeValue] 
+	find locator using playwright toolkit:
+		add: await page.pause(); to test. toolkit will open with pause > locator tab > select element to see locator name 
+
 
 	
 
