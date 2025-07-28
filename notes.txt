@@ -1,6 +1,9 @@
 handy links:
 	good testing site:
 		https://www.saucedemo.com/
+	chrome locators plugins (when inspecting element, the plugins tabs give unique locator info):
+		SelectorsHub
+		LetXPath
 
 
 Typescript basics:
