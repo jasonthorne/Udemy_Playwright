@@ -1,6 +1,7 @@
 handy links:
-	good testing site:
+	good testing sites:
 		https://www.saucedemo.com/
+		https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
 	chrome locators plugins (when inspecting element, the plugins tabs give unique locator info):
 		SelectorsHub
 		LetXPath
