@@ -22,6 +22,7 @@ Typescript basics:
 	install 'Code Runner' extension (to run ts more efficiently than creating js files first):
 		then right click on ts file > 'run code' 
 
+
 Playwright:
 	install playwright:
 		npm init playwright@latest (then keep defaults)
@@ -41,6 +42,7 @@ Playwright:
 		npx playwright test --headed
 	run tests in debug mode for a browser:
 		npx playwright test --project=chromium --debug
+
 
 codegen:
 	enable automatic code generation:
@@ -64,6 +66,7 @@ traceviewer (found under 'retry' tab in test report):
 	change trace command (from whats defined in config file) on test run:
 		npx playwright test --trace=[command you want. eg: on]
 
+
 Locating element in webpage dom:
 	find with id: #
 	find with css: [put in squarebrackets]
@@ -72,6 +75,14 @@ Locating element in webpage dom:
 		add: await page.pause(); to test. toolkit will open with pause > locator tab > select element to see locator name 
 
 
+Different things to assert:
+	Element is visiuble or hidden
+	Element is/is not present in DOM
+	Element is enabled or disabled
+	Element text matches or dismatches
+	URL
+	Title
+	Screenshot
 	
 
 		
