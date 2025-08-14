@@ -4,6 +4,7 @@ handy links:
 		https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
 		https://www.letskodeit.com/practice
 		https://the-internet.herokuapp.com/
+		https://letcode.in/test
 	chrome locators plugins (when inspecting element, the plugins tabs give unique locator info):
 		SelectorsHub
 		LetXPath
