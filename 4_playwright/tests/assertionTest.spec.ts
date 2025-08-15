@@ -19,9 +19,17 @@ test/*.only*/('Present/Not Present Assertion', async({page})=>{
     await page.close(); //+++++++++++++++DONT FORGET :P
 });
 
-test.only('Enabled/Disabled Assertion', async({page})=>{
+test/*.only*/('Enabled/Disabled Assertion', async({page})=>{
     await page.goto('https://letcode.in/button');
     await expect(page.locator('#property')).toBeEnabled(); //btn should be enabled
     await expect(page.locator('[title="Disabled button"]')).toBeDisabled(); //btn should be disabled
     await page.close(); //++++++
 });
+
+test.only('Text Match/Mismatch Assertion', async({page})=>{
+    await page.goto('https://letcode.in/button');
+    await expect(page.locator('[id="color"]')).toHaveText('What is my color?');
+    await expect(page.locator('[id="color"]')).not.toHaveText('shouldn\'t have this text');
+    await page.close(); //++++++
+});
+
