@@ -33,12 +33,21 @@ test/*.only*/('Text Match/Mismatch Assertion', async({page})=>{
     await page.close(); //++++++
 });
 
-test.only('Attribute Assertion', async({page})=>{
+test/*.only*/('Attribute Assertion', async({page})=>{
     await page.goto('https://opensource-demo.orangehrmlive.com');
     //NOTE: below, we're passing the attributes key and value as args: +++++++++++++
     await expect(page.locator('input[placeholder="Username"]')).toHaveAttribute('name','username');
     //NOTE class value below (of oxd-input inthis case), CANT be string, has to be with slashes and . (reg expression) ++++++++++++++++++++
     await expect(page.locator('input[placeholder="Username"]')).toHaveAttribute('class',/.oxd-input/);
+    await page.close(); //++++++
+});
+
+test.only('URL Assertion', async({page})=>{
+    await page.goto('https://opensource-demo.orangehrmlive.com');
+    //full URL assertion:
+    await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+    //partial URL assertion (NOTE: NO QUOTES - not a string):
+    await expect(page).toHaveURL(/demo.orangehrmlive.com/);
     await page.close(); //++++++
 });
 
