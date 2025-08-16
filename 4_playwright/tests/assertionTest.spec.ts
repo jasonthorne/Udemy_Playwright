@@ -42,12 +42,21 @@ test/*.only*/('Attribute Assertion', async({page})=>{
     await page.close(); //++++++
 });
 
-test.only('URL Assertion', async({page})=>{
+test/*.only*/('URL Assertion', async({page})=>{
     await page.goto('https://opensource-demo.orangehrmlive.com');
     //full URL assertion:
     await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
     //partial URL assertion (NOTE: NO QUOTES - not a string):
     await expect(page).toHaveURL(/demo.orangehrmlive.com/);
+    await page.close(); //++++++
+});
+
+test.only('Title Assertion', async({page})=>{
+    await page.goto('https://opensource-demo.orangehrmlive.com');
+    //full title assertion:
+    await expect(page).toHaveTitle('OrangeHRM');
+    //partual title assertion (NOTE reg expression for checking if txt in title: /.*)
+    await expect(page).toHaveTitle(/.*HRM/);
     await page.close(); //++++++
 });
 
