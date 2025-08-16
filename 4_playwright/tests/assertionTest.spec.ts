@@ -26,10 +26,19 @@ test/*.only*/('Enabled/Disabled Assertion', async({page})=>{
     await page.close(); //++++++
 });
 
-test.only('Text Match/Mismatch Assertion', async({page})=>{
+test/*.only*/('Text Match/Mismatch Assertion', async({page})=>{
     await page.goto('https://letcode.in/button');
     await expect(page.locator('[id="color"]')).toHaveText('What is my color?');
     await expect(page.locator('[id="color"]')).not.toHaveText('shouldn\'t have this text');
+    await page.close(); //++++++
+});
+
+test.only('Attribute Assertion', async({page})=>{
+    await page.goto('https://opensource-demo.orangehrmlive.com');
+    //NOTE: below, we're passing the attributes key and value as args: +++++++++++++
+    await expect(page.locator('input[placeholder="Username"]')).toHaveAttribute('name','username');
+    //NOTE class value below (of oxd-input inthis case), CANT be string, has to be with slashes and . (reg expression) ++++++++++++++++++++
+    await expect(page.locator('input[placeholder="Username"]')).toHaveAttribute('class',/.oxd-input/);
     await page.close(); //++++++
 });
 
