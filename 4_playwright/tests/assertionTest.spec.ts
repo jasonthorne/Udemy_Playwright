@@ -51,7 +51,7 @@ test/*.only*/('URL Assertion', async({page})=>{
     await page.close(); //++++++
 });
 
-test.only('Title Assertion', async({page})=>{
+test/*.only*/('Title Assertion', async({page})=>{
     await page.goto('https://opensource-demo.orangehrmlive.com');
     //full title assertion:
     await expect(page).toHaveTitle('OrangeHRM');
@@ -60,3 +60,9 @@ test.only('Title Assertion', async({page})=>{
     await page.close(); //++++++
 });
 
+test.only('Screenshot Assertion', async({page})=>{
+    await page.goto('https://opensource-demo.orangehrmlive.com');
+    //if no screenshot exists, then fails and makes screenshot for next time in 'snapshots' folder ++++++++++++++++
+    await expect(page).toHaveScreenshot(); 
+    await page.close(); //++++++
+});
