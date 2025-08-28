@@ -9,7 +9,6 @@ test/*.only*/('Fill Method', async({page})=>{
     await page.locator('button[type="submit"]').click();
     await page.locator('.oxd-userdropdown-tab').click();
     await page.locator('text=Logout').click();
-    
     await page.close();
 });
 
@@ -23,7 +22,6 @@ test/*.only*/('Press: Sequentially Method', async({page})=>{
     await page.locator('button[type="submit"]').click();
     await page.locator('.oxd-userdropdown-tab').click();
     await page.locator('text=Logout').click();
-    
     await page.close();
 });
 
@@ -36,6 +34,5 @@ test.only('Press: Sequentially Method with Delay', async({page})=>{
     //await page.locator('button[type="submit"]').click(); //skipped due to above
     await page.locator('.oxd-userdropdown-tab').click();
     await page.locator('text=Logout').click();
-    
     await page.close();
 });

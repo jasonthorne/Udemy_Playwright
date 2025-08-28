@@ -1,10 +1,11 @@
 handy links:
-	good testing sites:
+	testing sites:
 		https://www.saucedemo.com/
 		https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
 		https://www.letskodeit.com/practice
 		https://the-internet.herokuapp.com/
 		https://letcode.in/test
+		https://play1.automationcamp.ir/
 	chrome locators plugins (when inspecting element, the plugins tabs give unique locator info):
 		SelectorsHub
 		LetXPath
