@@ -6,6 +6,7 @@ handy links:
 		https://the-internet.herokuapp.com/
 		https://letcode.in/test
 		https://play1.automationcamp.ir/
+		https://demo.automationtesting.in/
 	chrome locators plugins (when inspecting element, the plugins tabs give unique locator info):
 		SelectorsHub
 		LetXPath
