@@ -8,7 +8,7 @@ import {test} from '@playwright/test';
 test('Single static dropdown handling', async({page})=>{
     await page.goto('https://demo.automationtesting.in/Register.html');
 
-    //-------------------------------------------------------------------------------------------
+    //--------------------------------------------------------------------------------------------
     //WAYS TO GET A SELECTION OPTION +++++++++++ specifically used for static dropdowns (where values are static)
     //getting selection option by id and value:
     await page.selectOption('#skills', {value: 'Android'});
