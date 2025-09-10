@@ -8,7 +8,7 @@ handy links:
 		https://play1.automationcamp.ir/
 		https://demo.automationtesting.in/Register.html - actually, not great :P
 	chrome locators plugins (when inspecting element, the plugins tabs give unique locator info):
-		SelectorsHub
+		SelectorsHub 
 		LetXPath
 
 
