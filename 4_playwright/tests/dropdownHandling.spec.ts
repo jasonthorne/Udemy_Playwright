@@ -5,7 +5,7 @@ import {test} from '@playwright/test';
 //multi static dropdown (values dont change)
 //dynamic dropdown
 
-test('Single static dropdown handling', async({page})=>{
+test/*.only*/('Single static dropdown handling', async({page})=>{
     await page.goto('https://demo.automationtesting.in/Register.html');
 
     //--------------------------------------------------------------------------------------------
@@ -25,8 +25,14 @@ test('Single static dropdown handling', async({page})=>{
 
     await page.pause(); //pause page to show selection
     //-------------------------------------------------------------------------------------------
-
-
-
     await page.close();
 });
+
+
+test.only('Multi static dropdown handling', async({page})=>{
+    await page.goto('https://www.lambdatest.com/selenium-playground/select-dropdown-demo');
+    await page.selectOption('#multi-select', [{value: "Ohio"},{label: "Texas"},{index: 3}]) //+++++++++passing array of values instead of one selected value
+    await page.pause(); //pause page to show selection
+    await page.close();
+});
+

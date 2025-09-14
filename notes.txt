@@ -7,6 +7,7 @@ handy links:
 		https://letcode.in/test
 		https://play1.automationcamp.ir/
 		https://demo.automationtesting.in/Register.html - actually, not great :P
+		https://www.lambdatest.com/selenium-playground/
 	chrome locators plugins (when inspecting element, the plugins tabs give unique locator info):
 		SelectorsHub 
 		LetXPath
