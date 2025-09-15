@@ -5,6 +5,8 @@ import {test} from '@playwright/test';
 //multi static dropdown (values dont change)
 //dynamic dropdown
 
+//Single static =====================================================
+
 test/*.only*/('Single static dropdown handling', async({page})=>{
     await page.goto('https://demo.automationtesting.in/Register.html');
 
@@ -28,11 +30,30 @@ test/*.only*/('Single static dropdown handling', async({page})=>{
     await page.close();
 });
 
+//Multi static =====================================================
 
-test.only('Multi static dropdown handling', async({page})=>{
+
+test/*.only*/('Multi static dropdown handling', async({page})=>{
     await page.goto('https://www.lambdatest.com/selenium-playground/select-dropdown-demo');
     await page.selectOption('#multi-select', [{value: "Ohio"},{label: "Texas"},{index: 3}]) //+++++++++passing array of values instead of one selected value
     await page.pause(); //pause page to show selection
+    await page.close();
+});
+
+//Dynamic drop downs  =====================================================
+
+
+//searchable dynamic drop down:
+test/*.only*/('Searchable dynamic dropdown handling', async({page})=>{
+    await page.goto('https://demo.automationtesting.in/Register.html');
+  
+    await page.close();
+});
+
+//NON searchable dynamic drop down:
+test/*.only*/('Non searchable dynamic dropdown handling', async({page})=>{
+    await page.goto('https://demo.automationtesting.in/Register.html');
+  
     await page.close();
 });
 
