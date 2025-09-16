@@ -43,14 +43,17 @@ test/*.only*/('Multi static dropdown handling', async({page})=>{
 //Dynamic drop downs  =====================================================
 
 
-//searchable dynamic drop down:
+//searchable dynamic drop down (has search box):
 test/*.only*/('Searchable dynamic dropdown handling', async({page})=>{
     await page.goto('https://demo.automationtesting.in/Register.html');
-  
+    await page.locator('span[role="combobox"]').click(); //needs clicked to expand the dropdown
+    await page.locator('input[role="textbox"]').fill("India"); //fill with search text
+    await page.locator('ul#select2-country-results>li').click(); //target found result using css locator, and click
+    await page.pause(); //pause page to show selection
     await page.close();
 });
 
-//NON searchable dynamic drop down:
+//NON searchable dynamic drop down (doesnt have search box):
 test/*.only*/('Non searchable dynamic dropdown handling', async({page})=>{
     await page.goto('https://demo.automationtesting.in/Register.html');
   
