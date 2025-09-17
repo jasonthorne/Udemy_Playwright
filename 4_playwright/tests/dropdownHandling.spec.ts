@@ -56,7 +56,9 @@ test/*.only*/('Searchable dynamic dropdown handling', async({page})=>{
 //NON searchable dynamic drop down (doesnt have search box):
 test/*.only*/('Non searchable dynamic dropdown handling', async({page})=>{
     await page.goto('https://demo.automationtesting.in/Register.html');
-  
+    await page.locator('span[role="combobox"]').click(); //needs clicked to expand the dropdown
+    //chaning locators to get list item with text 'india' from unordered list:
+    await page.locator('ul#select2-country-results').locator('li', {hasText: "India"}).click();
+    await page.pause(); //pause page to show selection
     await page.close();
 });
-
