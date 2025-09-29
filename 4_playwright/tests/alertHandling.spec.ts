@@ -42,7 +42,7 @@ test/*.only*/('Confirmation Alert Handling - clicking "ok" button', async({page}
     await page.close();
 });
 
-test.only('Confirmation Alert Handling - clicking "cancel" button', async({page})=>{
+test/*.only*/('Confirmation Alert Handling - clicking "cancel" button', async({page})=>{
     await page.goto('https://the-internet.herokuapp.com/javascript_alerts');
 
      //call page.on event listener NOTE: playwright will NOT auto lcose alrt using this, so .accept() must be called at end:
@@ -58,3 +58,38 @@ test.only('Confirmation Alert Handling - clicking "cancel" button', async({page}
     await page.close();
 });
 
+//-----------------------------------------------------------------------
+
+//ALERT WITH TEXT BOX:
+
+test/*.only*/('Text box Alert Handling - clicking "ok" button', async({page})=>{
+    await page.goto('https://the-internet.herokuapp.com/javascript_alerts');
+
+     //call page.on event listener NOTE: playwright will NOT auto lcose alrt using this, so .accept() must be called at end:
+     page.on("dialog", async(alert)=>{
+        const alertMsg = alert.message();
+        expect(alertMsg).toEqual('I am a JS prompt'); //confirm message in alert box
+        await alert.accept("My test test"); //click OKAY btn to close alert, ALSO passing test text ++++++++++
+        await expect(page.locator('#result')).toHaveText('You entered: My test test'); //confirm test text
+    });
+
+    //++++++++Actions that trigger event listeners ('page.on()' above in this case) should always be called AFTER the event listeneris defined
+    await page.locator("button[onclick='jsPrompt()']").click(); //click on alert btn
+    await page.close();
+});
+
+test.only('Text box Alert Handling - clicking "cancel" button', async({page})=>{
+    await page.goto('https://the-internet.herokuapp.com/javascript_alerts');
+
+     //call page.on event listener NOTE: playwright will NOT auto lcose alrt using this, so .accept() must be called at end:
+     page.on("dialog", async(alert)=>{
+        const alertMsg = alert.message();
+        expect(alertMsg).toEqual('I am a JS prompt'); //confirm message in alert box
+        await alert.dismiss(); //click CANCEL btn to close alert, passing NO TEXT (which should then give null) ++++++++++
+        await expect(page.locator('#result')).toHaveText('You entered: null'); //confirm null text
+    });
+
+    //++++++++Actions that trigger event listeners ('page.on()' above in this case) should always be called AFTER the event listeneris defined
+    await page.locator("button[onclick='jsPrompt()']").click(); //click on alert btn
+    await page.close();
+});
