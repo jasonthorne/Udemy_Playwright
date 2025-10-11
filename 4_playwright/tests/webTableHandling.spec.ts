@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test';
 
-test.only("Handling Webtable", async({page})=>{
+test/*.only*/("Handling Webtable", async({page})=>{
     await page.goto('https://testautomationpractice.blogspot.com/');
     const table = page.locator("table[name='BookTable']"); //grab table locator
 
@@ -21,8 +21,14 @@ test.only("Handling Webtable", async({page})=>{
     await page.close();
 });
 
-test/*.only*/("Selecting single checkbox in a table", async({page})=>{
+test.only("Selecting single checkbox in a table", async({page})=>{
     await page.goto('https://testautomationpractice.blogspot.com/');
+    const table = page.locator('#productTable'); //grab table
+    const cols = table.locator('thead tr th'); //table head > table row > table header
+    const rows = table.locator('tbody tr'); //grab rows
+
+
+    //#productTable
 
     await page.close();
 });
