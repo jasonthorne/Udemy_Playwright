@@ -27,8 +27,17 @@ test.only("Selecting single checkbox in a table", async({page})=>{
     const cols = table.locator('thead tr th'); //table head > table row > table header
     const rows = table.locator('tbody tr'); //grab rows
 
+    //first find matching row, then we can click it's checkbox:
+    const matchingRow = rows.filter({
+         //filter rows for target row:
+         has: page.locator('td'), //is table data
+         hasText: 'Tablet'//with this text
+    });
 
-    //#productTable
+    //get input element from target row (it's checkbox), and click it:
+    await matchingRow.locator('input').check();
+    
+    await page.pause(); //pause to show checkbox selection
 
     await page.close();
 });
